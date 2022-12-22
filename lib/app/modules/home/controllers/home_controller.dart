@@ -11,15 +11,13 @@ class HomeController extends GetxController {
   var altitudeLocation =''.obs;
   var latitudeLocation =0.0.obs;
   var longitudeLocation =0.0.obs;
-   var latlon =LatLng(0.0,0.0);
   void getGeoLocation() {
 
-    Provider.determinePosition().then((response) {
+    Provider.determinePosition().then((response) async{
       print("Redwannnnnnn++++++++++++ + $response");
       latitudeLocation.value = response.latitude;
       longitudeLocation.value = response.longitude;
       altitudeLocation.value =response.altitude.toString();
-      latlon =LatLng(response.latitude,response.longitude);
       print("latitudeLocation.value${latitudeLocation.value}");
       print(longitudeLocation.value);
       print(altitudeLocation.value);
