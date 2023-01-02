@@ -12,6 +12,8 @@ dependencies:
     sdk: flutter
   google_maps_flutter: ^2.2.2
   geolocator: ^9.0.2
+  geocoding: ^2.0.5
+  map_pin_picker: ^0.0.1
 
 dev_dependencies: 
   flutter_lints: ^2.0.0
