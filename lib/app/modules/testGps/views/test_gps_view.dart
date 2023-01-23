@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:app_settings/app_settings.dart';
-
-import 'package:get/get.dart';
 import 'package:location/location.dart';
+import 'package:get/get.dart';
+
 
 import '../controllers/test_gps_controller.dart';
 
