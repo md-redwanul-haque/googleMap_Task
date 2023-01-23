@@ -1,9 +1,9 @@
 import 'package:get/get.dart';
 
+import '../modules/SingleSelectListView/bindings/single_select_list_view_binding.dart';
+import '../modules/SingleSelectListView/views/single_select_list_view_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-import '../modules/listTileColorDefferenciate/bindings/list_tile_color_defferenciate_binding.dart';
-import '../modules/listTileColorDefferenciate/views/list_tile_color_defferenciate_view.dart';
 import '../modules/searchableListview/bindings/searchable_listview_binding.dart';
 import '../modules/searchableListview/views/searchable_listview_view.dart';
 import '../modules/testGps/bindings/test_gps_binding.dart';
@@ -33,9 +33,9 @@ class AppPages {
       binding: SearchableListviewBinding(),
     ),
     GetPage(
-      name: _Paths.LIST_TILE_COLOR_DEFFERENCIATE,
-      page: () => const ListTileColorDefferenciateView(),
-      binding: ListTileColorDefferenciateBinding(),
+      name: _Paths.SINGLE_SELECT_LIST_VIEW,
+      page: () => const SingleSelectListViewView(),
+      binding: SingleSelectListViewBinding(),
     ),
   ];
 }

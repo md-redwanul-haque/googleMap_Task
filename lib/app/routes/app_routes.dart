@@ -8,6 +8,7 @@ abstract class Routes {
   static const SEARCHABLE_LISTVIEW = _Paths.SEARCHABLE_LISTVIEW;
   static const LIST_TILE_COLOR_DEFFERENCIATE =
       _Paths.LIST_TILE_COLOR_DEFFERENCIATE;
+  static const SINGLE_SELECT_LIST_VIEW = _Paths.SINGLE_SELECT_LIST_VIEW;
 }
 
 abstract class _Paths {
@@ -16,4 +17,5 @@ abstract class _Paths {
   static const TEST_GPS = '/test-gps';
   static const SEARCHABLE_LISTVIEW = '/searchable-listview';
   static const LIST_TILE_COLOR_DEFFERENCIATE = '/list-tile-color-defferenciate';
+  static const SINGLE_SELECT_LIST_VIEW = '/single-select-list-view';
 }

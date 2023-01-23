@@ -1,9 +1,10 @@
 import 'package:get/get.dart';
 
-class ListTileColorDefferenciateController extends GetxController {
-  //TODO: Implement ListTileColorDefferenciateController
+class SingleSelectListViewController extends GetxController {
+  //TODO: Implement SingleSelectListViewController
 
   final count = 0.obs;
+  RxInt selectedIndex=0.obs;
   @override
   void onInit() {
     super.onInit();

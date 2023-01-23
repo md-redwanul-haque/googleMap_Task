@@ -14,30 +14,30 @@ class SearchableListviewView extends GetView<SearchableListviewController> {
         title: const Text('SearchableListviewView'),
         centerTitle: true,
       ),
-      body: Column(
-        children: [
-          ListView.builder(
-            physics: NeverScrollableScrollPhysics(),
-            shrinkWrap: true,
-            itemCount: 10,
-            itemBuilder: (context, index) {
-              return
-                Obx(()=>ListTile(
-                  title: Text('Item: $index',
-                      style: TextStyle(
-                          color: selectedIndex.value == index
-                              ? Colors.blue
-                              : Colors.black)),
-                  // tileColor: selectedIndex == index ? Colors.blue : null,
-                  onTap: () {
-                    selectedIndex.value = index;
-                    print(selectedIndex.value);
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+              TextFormField(
+                onChanged: (value)=>controller.filterItem(value),
+                decoration: InputDecoration(
+                  labelText: "search"
+                ),
+              ),
+            SizedBox(height: 10,),
+            Obx(()=>ListView.builder(
+              shrinkWrap: true,
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: controller.findItems.value.length,
+                itemBuilder: (BuildContext context , int index)
 
-                  },
-                ));
-            },
-          )
-        ],
+            {
+              return ListTile(
+                title: Text("${controller.findItems.value[index]["Name"]}"),
+                subtitle: Text("${controller.findItems.value[index]["Country"]}"),
+              );
+            }))
+          ],
+        ),
       )
     );
   }
